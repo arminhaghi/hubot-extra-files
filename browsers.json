@@ -1,26 +1,7 @@
 [
   {
-    "device": "iPhone 6",
-    "browser": "Mobile Safari",
-    "os_version": "8.3",
-    "os": "ios"
-  },
-  {
-    "device": "iPhone 6 Plus",
-    "browser": "Mobile Safari",
-    "os_version": "8.3",
-    "os": "ios"
-  },
-  {
-    "device": "iPhone Mini 2",
-    "browser": "Mobile Safari",
-    "os_version": "8.3",
-    "os": "ios"
-  },
-  {
-    "device": "iPhone Air",
-    "browser": "Mobile Safari",
-    "os_version": "8.3",
-    "os": "ios"
+    "os":"ios",
+    "os_version":"8.1",
+    "device":"iPhone 6 (8.1)"
   }
 ]
