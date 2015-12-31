@@ -1,0 +1,37 @@
+FROM ubuntu
+
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get -y install redis-server nodejs npm
+RUN ln -s /usr/bin/nodejs /usr/bin/node
+
+RUN npm install -g coffee-script
+RUN npm install -g yo generator-hubot
+
+# Create hubot user
+RUN useradd --system -d /hubot -m -s /bin/bash -U hubot
+
+# Log in as hubot user and change directory
+USER    hubot
+WORKDIR /hubot
+
+# Install hubot
+RUN yo hubot --owner="EPE-Team" --name="HuBot" --description="EPE HuBot on Docker" --defaults
+
+RUN npm install hubot-slack --save
+RUN npm install hubot-thank-you --save
+RUN npm install hubot-browserstack --save
+RUN npm install hubot-standup-alarm --save
+RUN npm install hubot-fliptable --save
+RUN npm install hubot-hello --save
+RUN npm install
+
+RUN curl -o external-scripts.json https://raw.githubusercontent.com/arminhaghi/hubot-extra-files/master/external-scripts.json
+
+RUN curl -o browsers.json https://raw.githubusercontent.com/arminhaghi/hubot-extra-files/master/browsers.json
+
+EXPOSE 80
+
+ENV HUBOT_BROWSER_STACK_USERNAME="armin.haghi@nordstrom.com" HUBOT_BROWSER_STACK_ACCESS_KEY="7PUWPZcN3dxzNBfPZFxZ" HUBOT_SLACK_TOKEN="xoxb-16858083175-ynKNc58Vb1oPyoTeZBrQrXYc" HUBOT_GOOGLE_CSE_ID="015825706496898756688:x11ugeulnwm" HUBOT_GOOGLE_CSE_KEY="AIzaSyAFj7WZWssjZwT98Trwq44ccz8DiFmiL0A" HUBOT_GOOGLE_API_KEY="AIzaSyAFj7WZWssjZwT98Trwq44ccz8DiFmiL0A" HUBOT_BROWSER_STACK_DEFAULT_BROWSERS="browsers.json"
+
+CMD bin/hubot -a slack
