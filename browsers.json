@@ -9,82 +9,10 @@
   },
   {
 
-    "device": "iPad Air",
+    "device": "iPhone 6 Plus",
     "browser": "Mobile Safari",
 
     "os_version": "8.3",
     "os": "ios"
-  },
-  {
-
-    "device": "Amazon Kindle Fire HDX",
-    "browser": "Android Browser",
-
-    "os_version": "4.0",
-    "os": "android"
-  }
-  {
-
-    "device": "Google Nexus 7",
-    "browser": "Android Browser",
-
-    "os_version": "4.1",
-    "os": "android"
-  }
-  {
-
-
-    "browser": "ie",
-    "browser_version": "9.0",
-    "os_version": "7",
-    "os": "Windows"
-  },
-  {
-
-
-    "browser": "ie",
-    "browser_version": "10.0",
-    "os_version": "7",
-    "os": "Windows"
-  },
-  {
-
-
-    "browser": "ie",
-    "browser_version": "11.0",
-    "os_version": "7",
-    "os": "Windows"
-  },
-  {
-
-
-    "browser": "firefox",
-    "browser_version": "37.0",
-    "os_version": "7",
-    "os": "Windows"
-  },
-  {
-
-
-    "browser": "chrome",
-    "browser_version": "42.0",
-    "os_version": "7",
-    "os": "Windows"
-  },
-  {
-
-
-    "browser": "ie",
-    "browser_version": "11.0 Desktop",
-    "os_version": "8.1",
-    "os": "Windows"
-  },
-  {
-
-
-    "browser": "safari",
-    "browser_version": "7.0",
-    "os_version": "Mavericks",
-    "os": "OS X"
   }
 ]
